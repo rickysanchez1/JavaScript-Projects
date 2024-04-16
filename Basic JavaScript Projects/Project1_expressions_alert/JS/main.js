@@ -1,1 +1,2 @@
-alert("display");
+let A = "STRING";
+window.alert(A);
