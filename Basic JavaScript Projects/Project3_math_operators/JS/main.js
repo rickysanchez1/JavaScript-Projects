@@ -1,10 +1,10 @@
 let A = 5; // Assigning 5 to the variable A
 A++; // Increment operator increases the value by one step up
-document.write(A);
+document.write(A + " This is increasing variable A by 1. ");
 
 let B = 6
 B--; // Decrement operator decreases the value by one step down
-document.write(B);
+document.write(B + " This is decreasing variable B by 1. ");
 
 function additionFunc() { // Creating additionFunc function
     let addition = 8 + 7; // Creating expression in variable addition
@@ -41,4 +41,4 @@ function negOperator() {
     document.getElementById("negoper").innerHTML = -x;
 }
 
-
+document.write(Math.pow(9,3));
