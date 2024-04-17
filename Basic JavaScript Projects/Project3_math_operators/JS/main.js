@@ -31,4 +31,4 @@ function modMath() {
 function negOperator() {{
     let x = 15;
     document.getElementById("negoper").innerHTML = -x;
-}}
+}
