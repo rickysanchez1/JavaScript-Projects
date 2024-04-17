@@ -1,5 +1,3 @@
-let car = "Volvo"
-
 function firstFunction() { //Declared a variable, firstFunction
     let x = 6; // Assigned 6 value to x variable
     let y = 7; // Assigned 7 value to y variable
@@ -12,12 +10,10 @@ function myFunction() {
     document.getElementById('letsadd').innerHTML = sentence;
 }
 
-let collect = document.getElementsByTagName("p");
-
 function functionOne(x, y) {
     return x * y;
 }
 
 function secondFunction() {
     document.getElementById("two").style.color = "red";
-  }
+}
