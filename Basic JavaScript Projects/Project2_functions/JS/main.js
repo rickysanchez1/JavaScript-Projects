@@ -1,7 +1,7 @@
-function firstFunction() {
-    let x = 6;
-    let y = 7;
-    document.getElementById("button").innerHTML = x + y;
+function firstFunction() { //Declared a variable, firstFunction
+    let x = 6; // Assigned 6 value to x variable
+    let y = 7; // Assigned 7 value to y variable
+    document.getElementById("button").innerHTML = x + y; // Used getElementByID to add x and y
 }
 
 function myFunction() {
