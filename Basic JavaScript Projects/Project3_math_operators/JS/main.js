@@ -22,3 +22,8 @@ function moreMath() {
     let simplemath = (23 + 15) * 43 / 4 - 9;
     document.getElementById("math").innerHTML = "23 plus 15, multiplied by 43, divided by 5 and then subtracted by 9 equals " + simplemath;
 }
+
+function modMath() {
+    let remainder = 15 % 9;
+    document.getElementById("modu").innerHTML = "When you divide 15 by 9 you have a remainder of: " + remainder;
+}
