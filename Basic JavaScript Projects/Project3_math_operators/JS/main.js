@@ -27,3 +27,8 @@ function modMath() {
     let remainder = 15 % 9;
     document.getElementById("modu").innerHTML = "When you divide 15 by 9 you have a remainder of: " + remainder;
 }
+
+function negOperator() {{
+    let x = 15;
+    document.getElementById("negoper").innerHTML = -x;
+}}
