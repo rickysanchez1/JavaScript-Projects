@@ -23,3 +23,9 @@ function myDictionary() {
     delete Brandon.career;
     document.getElementById("Dictionary").innerHTML = Brandon.career;
 }
+
+let dog = "bow wow"
+document.write(typeof dog); // typeof will return the data type of specified variable
+
+document.write(typeof 15);
+
