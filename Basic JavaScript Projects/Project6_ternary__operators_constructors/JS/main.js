@@ -1,3 +1,5 @@
+// let null = true; // I have used an assigned word to a variable and a value... it does not allow the rest of the code to work
+
 // Ternary Operators syntax: variable = (condition) ? expressiontrue : expressionfalse;
 function rideFunction() {
     let height, can_ride;
@@ -42,3 +44,18 @@ let Amber = new Manga("Kazuo Umezu", "Drifint Classroom", 1972, "Horror");
 function mangaFunction() {
     document.getElementById("New_and_this").innerHTML = "Ricky's favorite Manga is " + Ricky.Manga_Series + " by author " + Ricky.Manga_Author + ". It was first published in the year " + Ricky.Manga_Run + " and the genre is " + Ricky.Manga_Genre;
 }
+
+function Dog(furlength, furcolor, size) {
+    this.Dog_furlength = furlength;
+    this.Dog_furcolor = furcolor;
+    this.Dog_size = size;
+}
+
+let doberman = new Dog("short", "dark brown and black", "large");
+let golden_retriever = new Dog("Long" , "Golden", "Large");
+let dachshund = new Dog("Short", "Brown", "Small");
+let chihuahua = new Dog("Short or long", "Various colors", "Toy");
+function dogFunction() {
+    document.getElementById("doggos").innerHTML = "My favorite dog has " + doberman.Dog_furcolor + " and has very " + doberman.Dog_furlength + ", it is also muscular and kind of a " + doberman.Dog_size + " dog.";
+}
+
