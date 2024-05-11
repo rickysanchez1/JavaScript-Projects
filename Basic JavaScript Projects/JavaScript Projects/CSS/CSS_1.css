@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+}
+.center {
+    border: 5px solid;
+    border-radius: 5px;
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #1367e4;
+    color: white;
+    margin: 5px 0;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3383fa;
+}
