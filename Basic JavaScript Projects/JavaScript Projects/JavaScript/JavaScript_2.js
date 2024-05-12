@@ -11,4 +11,5 @@ function validateForm() {
       }
     }
     return true;
-  }
+}
+

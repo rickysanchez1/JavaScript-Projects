@@ -61,3 +61,4 @@ rad.addColorStop(6/6, "purple");
 
 canfx.fillStyle = rad;
 canfx.fillRect(20, 20, 150, 100);
+
