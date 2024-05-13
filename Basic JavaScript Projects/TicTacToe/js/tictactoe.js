@@ -1,14 +1,14 @@
 // This variable keeps track of whose turn it is
 let activePlayer = 'X';
 // This array stores an array of moves. We use this to determine the win conditions.
-let selectedSqaures = [];
+let selectedSquares = [];
 
 // This function is for placing an x or o in a square
 function placeXOrO(squareNumber) {
     // This condition ensures a square hasn't been selected already.
     // the .some() method is used to check each element of the selectSquare array
     // to see if it contains the square number clicked on.
-    if (!selectedSqaures.some(element => element.includes(squareNumber))) {
+    if (!selectedSquares.some(element => element.includes(squareNumber))) {
         // This variable retrieves the HTML element id that was clicked.
         let select = document.getElementById(squareNumber);
         // This condition checks who's turn it is.
@@ -21,7 +21,7 @@ function placeXOrO(squareNumber) {
             select.style.backgroundImage = 'url("./images/o.png")';
         }
         // squareNumber and activePlayer are concated together and added to array.
-        selectedSqaures.push(squareNumber + activePlayer);
+        selectedSquares.push(squareNumber + activePlayer);
         // This calls a function to check for any win conditions.
         checkWinConditions();
         // This condition is for changing the active player.
@@ -102,8 +102,8 @@ function checkWinConditions() {
     // O 0, 4, 8 condition.
     else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
     // This condition checks for a tie. If none of the above conditions are met and
-    // 9 sqyares are selected, the code executes.
-    else if (selectedSqaures,length >= 9) {
+    // 9 squares are selected, the code executes.
+    else if (selectedSquares.length >= 9) {
         // This function plays the tie game sound.
         audio('./media/tie.mp3');
         // This function sets a .3 second timer before the resetGame is called.
@@ -113,9 +113,9 @@ function checkWinConditions() {
     // each win condition
     function arrayIncludes(squareA, squareB, squareC) {
         // These 3 variables will be used to check for 3 in a row.
-        const a = selectedSqaures.includes(squareA);
-        const b = selectedSqaures.includes(squareB);
-        const c = selectedSqaures.includes(squareC);
+        const a = selectedSquares.includes(squareA);
+        const b = selectedSquares.includes(squareB);
+        const c = selectedSquares.includes(squareC);
         //If the 3 variables we pass are all included in our array then
         // true is returned and our else if condition executes the drawLine() function.
         if (a === true && b === true && c === true) { return true; }
@@ -222,5 +222,5 @@ function resetGame() {
         square.style.backgroundImage = '';
     }
     // This resets our array so it is empty and we can start over.
-    selectedSqaures = [];
+    selectedSquares = [];
 }
