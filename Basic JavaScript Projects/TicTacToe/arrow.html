@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Challenge</title>
+</head>
+<body>
+
+    <p id="arrowed"></p>
+
+    <p id="number" onclick="numbFunction()">click here</p>
+
+    
+<script>
+
+    let numby = [1, 2, 4, 8, 16, 32, 64];
+
+    // Arrow function will pass the parameter of number
+    checkNumbers = (numb) => numb >= 16;
+
+    function numbFunction() {
+        // .some() will iterate through the array and display the result
+        document.getElementById("number").innerHTML = numby.some(checkNumbers);
+    }
+
+    let arrow = "";
+    arrow = () => {
+        return "ARROWED";
+    }
+
+    document.getElementById("arrowed").innerHTML = arrow();
+</script>
+</body>
+</html>
