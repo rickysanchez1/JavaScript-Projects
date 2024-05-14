@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./JS/async.js" defer></script>
+    <script src="./JS/defer.js" defer></script>
+    <script src="./JS/defer2.js" defer></script>
+    <title>Async and Defer attributes</title>
+</head>
+<body>
+    <h2>Aysnc and Defer attributes should be placed in the head element of the html file.</h2>
+    <p>Defer attribute is a better choice than async since it will load once the html doc is done parsing without interuptions.</p>
+    <p id="p1">Async attribute has finished loading and is now executed</p>
+    <p>Async attribute will load while the html is parsing and execute once it is ready.</p>
+    <p id="p2">Doc has completed parsing</p>
+    <p>Defer Attribute will load once the html doc is done parsing</p>
+    <p id="p3">This is the next defer attribute</p>
+    <p>Any subsequent defers will load in order they were written</p>
+    
+</body>
+</html>

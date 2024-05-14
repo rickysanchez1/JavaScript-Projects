@@ -2,7 +2,7 @@
 
 // Ternary Operators syntax: variable = (condition) ? expressiontrue : expressionfalse;
 function rideFunction() {
-    let height, can_ride;
+    let height, can_ride;  // This are local variables
     height = document.getElementById("height").value;// Ternary operators operate on 3 operands.
     can_ride = (height < 52) ? "You are not tall enough":"You are tall enough"; // Tenary operators can be used to replace multiple lines of code with a single line.
     document.getElementById("ride").innerHTML = can_ride + " to ride.";
@@ -51,10 +51,10 @@ function Dog(furlength, furcolor, size) {
     this.Dog_size = size;
 }
 
-let doberman = new Dog("short", "dark brown and black", "large");
-let golden_retriever = new Dog("Long" , "Golden", "Large");
-let dachshund = new Dog("Short", "Brown", "Small");
-let chihuahua = new Dog("Short or long", "Various colors", "Toy");
+let doberman = new Dog("short", "dark brown and black", "large"); // These are global variables
+let golden_retriever = new Dog("Long" , "Golden", "Large"); // These are global variables
+let dachshund = new Dog("Short", "Brown", "Small"); // These are global variables
+let chihuahua = new Dog("Short or long", "Various colors", "Toy"); // These are global variables
 function dogFunction() {
     document.getElementById("doggos").innerHTML = "My favorite dog has " + doberman.Dog_furcolor + " and has very " + doberman.Dog_furlength + ", it is also muscular and kind of a " + doberman.Dog_size + " dog.";
 }

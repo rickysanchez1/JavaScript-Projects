@@ -14,27 +14,27 @@ function countdown() {
   tick();
 }
 
-let slideIndex = 1;
-showSlides(slideIndex); // 
+let slideIndex = 1; // this is the active photo container
+showSlides(slideIndex); // This will invoke the function below with the parameter of the slideIndex variable to display the function automatically
 
 // Next/previous controls
 function plusSlides(n) { 
-  showSlides(slideIndex += n); // this line will invoke the showSlides declaration function and add 1
+  showSlides(slideIndex += n); // when the prev button is pressed it will -1 from slideindex to display the previous slide container. when the next button is pressed it will advance to the next photo container
 }
 
-// Image controls
+// Square controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(slideIndex = n); // when one of the squares are pressed it will change to the active photocontainer given the parameter and now the slideindex is whatever the corresponding square is, ie:currentSlide(1)
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slides");
-  let square = document.getElementsByClassName("square");
-  if (n > slides.length) {slideIndex = 1} // if the value of slideIndex is greater than the slides length
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let i; // creating an i variable to pass values later in the function
+  let slides = document.getElementsByClassName("slides"); // this variable is created to control each photo container
+  let square = document.getElementsByClassName("square"); // this variable is created to control the square controls 
+  if (n > slides.length) {slideIndex = 1} //  if slideIndex is greater than 3 then the slideIndex value is 1
+  if (n < 1) {slideIndex = slides.length} // if slideIndex is less than 1 then the value for slideIndex is 3
+  for (i = 0; i < slides.length; i++) { // while i is less than slides.length 
+    slides[i].style.display = "none"; // slides is an array and give me the value of i. 
   }
   for (i = 0; i < square.length; i++) {
     square[i].className = square[i].className.replace(" active", "");
@@ -42,4 +42,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   square[slideIndex-1].className += " active";
 }
-
