@@ -1,0 +1,135 @@
+
+
+/* Nav Bar*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav Bar*/
+.navbar {
+    position: sticky;
+    text-align: center;
+    top: 0;
+    background-color: rgb(175, 240, 175);
+    padding: 25px;
+}
+
+
+/* Responsive Font Text*/
+.vw {
+    font-size: 8vw;
+}
+
+/* This will allow the page to fade in */
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+  
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Popup button*/
+.open-pops {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: black;
+    background-color: rgb(175, 240, 175);
+    padding: 25px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.form-popup {
+    display: none; /* this will make sure the form is hidden until the button is pressed to show it*/
+    position: fixed;
+    right: 0;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.pop-forms {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.pop-forms input[type=text]:focus, .form-popup input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.pop-forms .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.pop-forms .btn:hover, .open-pops:hover {
+    opacity: 1;
+}
+
+/* @keyframes Rule */
+/* in the property animaion we used the selector box  */
+.kframes {
+    color: white;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: relative;
+    animation: box 5s infinite;
+}
+/* 0% - 100% are the values of how far the element will change, with 0% being the start and 100% being the end*/
+@keyframes box { 
+    0% {background-color: black;} 
+    14.2% {background-color: red;}
+    28.4% {background-color: orange;}
+    42.6% {background-color: yellow;}
+    56.8% {background-color: green;}
+    71% {background-color: blue;}
+    85.2% {background-color: indigo;}
+    100% {background-color: violet;}
+}
+
+/* @keyframes zoom in and out */
+/* the scale(1.2,1.2) is the multiplied size of the zoomed out image. */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2); 
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/* 15seconds is the time to complete both zoom in and out animation */
+.wptheme {
+    animation: zoominoutsinglefeatured 15s forwards;
+    border-radius: 5%;
+    padding: 10%;
+}
+
+/* Auto-Play Slideshow */
+.slideshow {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+}
+
+.sideshow img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

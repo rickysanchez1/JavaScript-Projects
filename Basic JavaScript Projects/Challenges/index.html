@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="./JS/main.js" defer></script>
+    <title>JS Challenges</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <div class="navbar">
+        <div>
+            <a href="#Responsive">Responsive Text</a>
+            <a href="#FormValidation">Form Validation</a>
+            <a href="#Popupform">Popup Form</a>
+            <a href="#keyframes1">Keyframes Animation</a>
+            <a href="#keyframes2">Zoom in and out</a>
+            <a href="#Slideshow">Auto-Playing Slideshow</a>
+            <a href="#Responsive">Responsive Text</a>
+            <a href="#Responsive">Responsive Text</a>
+        </div>
+    </div>
+    <!-- /Nav Bar -->
+
+    <!-- Responsive Font Size -->
+    <div id="Responsive">
+    <h1 class="vw">Responsive Font Size</h1>
+    </div>
+    <!-- /Responsive Font Size -->
+
+    <!-- Horizontal Rule -->
+    <hr>
+    <!-- /Horizontal Rule -->
+
+    <!-- Form Validation -->
+    <div id="FormValidation">
+        <h2>Form with telephone field and form validation.</h2>
+        <form name="forms" onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="First Name" placeholder="First Name..."><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="Last Name" placeholder="Last Name..."><br>
+            <label for="pnumber">Phone Number:</label><br>
+            <input type="tel" id="pnumber" name="Phone Number" placeholder="123-456-7890"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!-- /Form Validation -->
+
+    <!-- Sticky Contact Button -->
+    <div>
+        <button class="open-pops" onclick="openPops()">CONTACT</button>
+    </div>
+    <!-- /Sticky Contact Button -->
+
+    <!-- Popup Form -->
+    <div id="Popupform">    
+        <div class="form-popup" id="popupform">
+            <h1>Popup form</h1>
+            <form class="pop-forms">
+                <label for="username"><b>Username</b></label><br>
+                <input type="text" placeholder="Enter Username" name="username" required><br>
+
+                <label for="pass"><b>Password</b></label><br>
+                <input type="password" placeholder="Enter Password" name="pass" required><br><br>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closePops()">Close</button>
+
+            </form>
+        </div>
+    </div>
+    <!-- Popup Form -->
+
+    <!-- Animated @keyframes -->
+    <div id="keyframes1">
+        <div class="kframes">I am animated</div>
+    </div>
+    <!-- /Animated @keyframes -->
+
+    <!-- Zoom/out @keyframes -->
+    <div id="keyframes2">
+        <div>
+            <img src="./images/2017.jpg" alt="2017 WP theme" class="wptheme">
+        </div>
+    </div>
+    <!-- /Zoom/out @keyframes -->
+
+    <!-- Auto-Playing Slideshow -->
+    <div id="Slideshow">
+        <div class="slideshow">
+            <img src="./images/gyoza.jpg" alt="Gyoza" width="240px" height="240px">
+            <img src="./images/gyoza2.jpg" alt="Another Gyoza" width="240px" height="240px">
+            <img src="./images/gyoza3.jpg" alt="More Gyoza" width="240px" height="240px">
+        </div>
+    </div>
+
+    <script>
+
+        document.body.classList.add('fade-out');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.remove('fade-out');
+        });
+
+    </script>
+
+</body>
+</html>
