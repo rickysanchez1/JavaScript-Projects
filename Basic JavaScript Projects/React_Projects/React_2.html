@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <title>React Assignment</title>
+</head>
+<body>
+
+    <div id="like_button_container"></div>
+
+    <script>
+    const X = React.createElement; // creating React element
+
+    // React components serve the same purpose as functions and return HTML via a render
+    class likeButton extends React.Component { // Extends will inherit methods from the react component
+        constructor(props) { // Constructor method is used to initialize object properties
+            super(props); // Super is used to call the constructor of its parent class to access the parents properties and methods
+            this.state = { liked: false }; // default state of the likedbutton is false
+        }
+
+        render() { // this will display a react component inside a DOM element
+            if (this.state.liked) {
+                return 'You clicked the like button!';
+            }
+
+            return X( // this is creating a button element that will call the function onclick
+                'button',
+                { onClick: () => this.setState({ liked: true }) },
+                'Like'
+            );
+        }
+    }
+
+    const domContainer = document.querySelector('#like_button_container');
+    ReactDOM.render(X(likeButton), domContainer);
+    </script>
+</body>
+</html>
