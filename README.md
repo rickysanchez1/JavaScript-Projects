@@ -1,5 +1,3 @@
-# JavaScript-Projects
-
 <h1>JavaScript Projects</h1>
 
 <p>In this repository I will be sharing my journey learning JavaScript.</p>
